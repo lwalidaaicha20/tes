@@ -3,16 +3,8 @@ var router = express.Router();
 const { getBuffer } = require('../lib/function')
 const axios = require('axios')
 const fetch = require('node-fetch')
-const fs = require('fs')
 var hikkiMe = require("hikki-me")
 __path = process.cwd()
-
-async function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
-
-
-
 
 router.get('/dana10k', async(req, res) => {
   var nomorhp = req.query.nomorhp
